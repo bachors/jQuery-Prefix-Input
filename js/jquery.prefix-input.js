@@ -5,4 +5,4 @@
 * Updates will be posted to this site.
 ************************************************/
 
-$(".ibacor_fi").focus(function(){var ibacor_prefix=$(this).data("prefix"),ibacor_currentId=$(this).attr('id');ibacor_fi(ibacor_prefix,ibacor_currentId);return false});function ibacor_fi(ibacor_prefix,ibacor_input_id){$('#'+ibacor_input_id).keydown(function(){setTimeout(function(){var ibacor_input=$('#'+ibacor_input_id).val(),ibacor_jumlah=ibacor_prefix.length,ibacor_cek=ibacor_input.substring(0,ibacor_jumlah);if(ibacor_input.match(new RegExp(ibacor_prefix))&&ibacor_cek==ibacor_prefix){$('#'+ibacor_input_id).val(ibacor_input)}else{$('#'+ibacor_input_id).val(ibacor_prefix)}},50)})}
+$(".ibacor_fi").focus(function(){var a=$(this).data("prefix"),ibacor_currentId=$(this).attr('id');$(this).val(a);ibacor_fi(a,ibacor_currentId);return false});function ibacor_fi(b,c){$('#'+c).keydown(function(){setTimeout(function(){var a=$('#'+c).val(),ibacor_jumlah=b.length,ibacor_cek=a.substring(0,ibacor_jumlah);if(a.match(new RegExp(b))&&ibacor_cek==b){$('#'+c).val(a)}else{$('#'+c).val(b)}},50)})}
