@@ -6,30 +6,30 @@
 ***********************************************/
 
 $(".ibacor_fi").focus(function() {
-    var a = $(this).data("prefix"),
+    var a = $(this).data("prefix").toString(),
         ibacor_currentId = $(this).attr('id'),
         ibacor_val = $(this).val();
     if (ibacor_val == '') {
         $(this).val(a)
     }
-    ibacor_fi((Math.abs(a)) ? a : a.replace('ibacorat', ''), ibacor_currentId);
+    ibacor_fi(a.replace('ibacorat', ''), ibacor_currentId);
     return false
 });
 
 function ibacor_fi(d, e) {
     $('#' + e).keydown(function(c) {
         setTimeout(function() {
-            var a = (Math.abs($('#' + e).val())) ? $('#' + e).val() : bcr_riplis($('#' + e).val()),
-                qq = (Math.abs(d)) ? d : bcr_riplis(d),
+            var a = bcr_riplis($('#' + e).val()),
+                qq = bcr_riplis(d),
                 ibacor_jumlah = qq.length,
                 ibacor_cek = a.substring(0, ibacor_jumlah);
             if (a.match(new RegExp(qq)) && ibacor_cek == qq) {
-                $('#' + e).val((Math.abs(a)) ? a : bcr_unriplis(a))
+                $('#' + e).val(bcr_unriplis(a))
             } else {
                 if (c.key == 'Control' || c.key == 'Backspace' || c.key == 'Del') {
-                    $('#' + e).val((Math.abs(a)) ? qq : bcr_unriplis(qq))
+                    $('#' + e).val(bcr_unriplis(qq))
                 } else {
-                    var b = (Math.abs(a)) ? qq + c.key : bcr_unriplis(qq) + c.key;
+                    var b = bcr_unriplis(qq) + c.key;
                     $('#' + e).val(b.replace("undefined", ""))
                 }
             }
