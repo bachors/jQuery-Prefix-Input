@@ -2,7 +2,7 @@
 jquery plugins to provide the input prefix<hr>
 <h2>Example:</h2>
 <pre>Member Name &lt;input type="text" class="demo" data-prefix="JKT48_" /&gt;
-Member ID &lt;input type="text" class="demo" data-prefix="http://" /&gt;
+Website &lt;input type="text" class="demo" data-prefix="http://" /&gt;
 Phone &lt;input type="text" class="demo" data-prefix="+62" /&gt;</pre>
 <h2>jQuery:</h2>
 <pre>
