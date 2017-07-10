@@ -18,5 +18,3 @@ $(function() {
 });
 &lt;/script&gt;
 </pre>
-
-<h1><a href="http://ibacor.com/demo/jquery-prefix-input/" target="_BLANK">DEMO</a></h1>
